@@ -1,0 +1,23 @@
+function chamarPhpAjax() {
+   $.ajax({
+      url:'meuajax.php',
+      complete: function (response) {
+         alert(response.responseText);
+      },
+      error: function () {
+          alert('Erro');
+      }
+  });  
+
+  return false;
+}
+Então no seu link:
+
+ <a href="" onclick="return chamarPhpAjax();">Teste onclick</a>
+O seu arquivo "meuajax.php":
+
+function testeOnclick() {
+    echo 'Bem vindo ao SOpt';
+}
+
+testeOnclick();
